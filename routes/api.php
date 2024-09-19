@@ -11,7 +11,8 @@ Route::get('/user', function (Request $request) {
 
 
 
-// api/v1/endpoint
+// api/endpoint
 
 Route::apiResource('customers',CustomerController::class);
 Route::apiResource('invoices',InvoiceController::class);
+Route::post('invoices/bulk', [InvoiceController::class, 'bulkStore']);
